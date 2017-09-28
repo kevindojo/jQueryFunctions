@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Functions</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <style>
+        .change{
+            color:red;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('#hide').click(function(){
+                $("p.hs").hide();
+            })
+            $('#show').click(function(){
+                $('p.hs').show();
+            })
+
+            $('#toggle').click(function(){
+                $('p.tog').toggle();
+            })
+
+            $("#slidetoggle").click(function(){
+                $("p.slide").slideToggle();
+            })
+
+            $("#up").click(function(){
+                $("p.updown").slideUp();
+            })
+
+            $("#down").click(function(){
+                $("p.updown").slideDown();
+            })
+
+            $("#fadeout").click(function(){
+                $("p.inout").fadeOut();
+            })
+
+            $("#fadein").click(function(){
+                $("p.inout").fadeIn();
+            })
+
+            $("button.color").click(function(){
+                $("p.color").addClass("change")
+                
+            })
+            $("button.before").click(function(){
+                $("p.before").before("<b>before</b>")
+            })
+
+            $("button.after").click(function(){
+                $("p.after").after("<b>after</b>")
+            })
+            $("button.append").click(function(){
+                $("p.append").append("<b>append</b>")
+            })
+            $("button.html").click(function(){
+                $("p.html").html("<b>google.com</b>")
+            })
+            $("button.attribute").click(function(){
+                $("img.attr").attr("width", "500");
+            })
+            $("button.val").click(function(){
+                $("input.val").val("Spiderman");
+            })
+
+            $("button.text").click(function(){
+                $("p.text").text("Spiderman");
+            })
+            $("button.data1").click(function(){
+                $("div").data("Hero","Spiderman!!!");
+            });
+            $("button.data2").click(function(){
+                alert($("div").data("Hero"))
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Hide and Show</h1>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <p class="hs">Click the button to hide me!</p>
+
+    </div>
+    <div>
+        <h1>Toggle and Slide Toggle!</h1>
+        <button id="toggle">Toggle</button>
+        <p class="tog">Toggle me!</p>
+        <button id="slidetoggle">SideToggle</button>
+        <p class="slide">slides this paragraph away</p>
+    </div>
+    <div>
+        <h1>Slide up and Down</h1>
+        <p class="updown">Slid up and down</p>
+        <button id="up">Up</button>
+        <button id="down">Down</button>
+    </div>
+    <div>
+        <h1>Fade IN and OUT</h1>
+        <button id="fadeout">bye</button>
+        <p class="inout">Fade into white</p>
+        <button id="fadein">hello, again</button>
+
+
+    </div>
+    <div>
+        <h1>Add Class</h1>
+        <p class="color">Change colors!</p>
+        <button class="color">Add Class</button>
+        
+    </div>
+    <div>
+        <h1 class= "before">Before</h1>
+        <button class= "before">Add before</button>
+        <p class ="before">I clicked and added this sentence BEFORE ></p>
+
+    </div>
+    <div>
+        <h1 class= "after">After</h1>
+        <button class= "after">Add after</button>
+        <p class ="after">I clicked and added this sentence after ></p>
+    </div>
+    <div>
+        <h1 class= "append">appendd</h1>
+        <button class= "append">Add after</button>
+        <p class ="append">I'm appending!</p>
+    </div>
+    <div>
+        <h1 class= "html">HTML</h1>
+        <button class= "html">reveal HTML</button>
+        <p class ="html">html will show here</p>
+    </div>
+    <div>
+            <h1 class= "attribute">Attribute</h1>
+            <button class= "attribute">This will add an attribute</button>
+            <img class="attr" src ="icon.png" alt ="spiderman" width= "100" height= "100">
+    </div>
+    <div>
+        <h1 class= "val">Value</h1>
+        <button class= "val">This will fill in the field</button>
+        <p>Name: <input class ="val" type="text" name="user"></p>
+    </div>
+    <div>
+        <h1 class= "text">Text</h1>
+        <button class= "text">Guess who?</button>
+        <p class ="text">Who is the best?</p>
+    </div>
+    <div>
+        <h1 clas="data">Data</h1>
+        <button class="data1">CLICK FIRST to add data</button>
+        <button class="data2">Click to see</button>
+    </div>
+</body>
+</html>
